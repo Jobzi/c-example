@@ -13,12 +13,12 @@
 
 version: "3.9"
 services:
-  c-app:
+  cpp-app:
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/usr/src/app  # Sync local files with the container
+      - .:/usr/src/app  # Sync local directory to container directory
     working_dir: /usr/src/app
-    stdin_open: true
-    tty: true
+    stdin_open: true  # Keep the container open for interactive use
+    tty: true         # Enable an interactive terminal

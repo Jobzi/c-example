@@ -16,4 +16,4 @@
 
 FROM gcc:latest
 WORKDIR /usr/src/app
-CMD gcc -o hello 2.c && ./hello
+CMD ["bash"]
